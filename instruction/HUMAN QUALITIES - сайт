@@ -1,0 +1,71 @@
+HUMAN QUALITIES - сайт
+______________________________________
+
+
+	USER
+		
+		image not changed after upload
+		image add after registration "avatar.png"
+		in profile page switch of evaluating if not friend
+		comment design
+		comment avatar add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		ajax запросы
+
+
+
+    //@PostMapping("/user/page/comment/add/ajax")
+    @RequestMapping(value="/user/page/comment/add/ajax", method=RequestMethod.GET)
+    public @ResponseBody
+    Comment add(@RequestParam String data) {
+
+        Comment result = new Comment();
+        result.setMessage("message");
+//        User listener = userServiceImplementation.getUserById( Long.parseLong(data[0], 10));
+//        User commentator = userServiceImplementation.getCurrentUser();
+//        result = commentServiceImplementation.add(listener, commentator, data[1]);
+
+        System.out.println(data);
+        return result;
+    }
+
+
+
+    <script type="text/javascript">
+    function doAjax() {
+        alert("ajax")
+        //var inputText = [$("#user_id").val(), $("#user_message").val()];
+        var inputText = $("#user_id").val();
+
+        $.ajax({
+            url : '/user/page/comment/add/ajax',
+            type: 'GET',
+            data: ({
+                text: inputText
+            }),
+            success: function (data) {
+                alert("suc")
+            },
+            error: function () {
+                alert("error")
+            }
+        });
+    }
+</script>

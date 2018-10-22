@@ -1,0 +1,38 @@
+heroku
+
+After pushing________________
+Install the Heroku CLI
+Download and install the Heroku CLI.
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+$ heroku login
+Clone the repository
+Use Git to clone quiet-harbor-11180's source code to your local machine.
+
+$ heroku git:clone -a quiet-harbor-11180
+$ cd quiet-harbor-11180
+Deploy your changes
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+
+Before pushing_______________________
+cd project_folder
+git init
+heroku git:remote -a human-quality
+git add .
+git commit -am "comment"
+git push heroku master
+
+
+
+DEPLOYMENT_ENVIRONMENT
+production
+
+
+https://myaccount.google.com/lesssecureapps
+https://accounts.google.com/b/0/DisplayUnlockCaptcha
